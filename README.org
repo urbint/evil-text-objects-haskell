@@ -1,0 +1,38 @@
+* Haskell Text Objects
+
+This package defines text objects that should make your Haskell
+development experience *even more* enjoyable.
+
+This package has text objects defined for:
+
+*** functions
+*** comment blocks
+
+* Install
+
+** [[https://github.com/quelpa/quelpa][Quelpa]]
+
+#+BEGIN_SRC emacs-lisp
+(quelpa '(evil-text-objects-haskell
+          :fetcher github
+          :repo "urbint/evil-text-objects-haskell"))
+#+END_SRC
+
+* Configuration
+
+** Vanilla Elisp
+
+#+BEGIN_SRC emacs-lisp
+(require 'evil-text-objects-haskell)
+(add-hook 'haskell-mode-hook #'evil-text-objects-haskell/install)
+#+END_SRC
+
+* Keybindings
+
+The following keybindings are assigned. Configuration may be provided
+in the future to support overwrites to reflect personal
+preferences. Please open an issue if you have a compelling reason this
+should be supported.
+
+*** "f" - function
+*** "C" - comment block
